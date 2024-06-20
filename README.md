@@ -1,10 +1,20 @@
 
 Please create .env replacing the code of .env.example file and build with docker command:
+# build
 docker-compose up -d --build
+
+# migration
 docker compose exec php php artisan migrate
+
+# optimize
 docker compose exec php php artisan optimize:clear
+
+# seeder
 docker compose exec php php db:seed
+
+# factory
 docker compose exec php php db:seed ProductSeeder
+
 ## About this project
 
 Sr. Software Engineer Assignment:
